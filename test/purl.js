@@ -23,6 +23,9 @@ test('toPurl - valid', function (t) {
     'pkg:npm/%40foo/bar@1.0.0'
   )
 
+  // Register specifier
+  t.equal(npa.toPurl('registry:https://other-internal.com#@foo/bar@2.3.0'), 'pkg:npm/%40foo/bar@2.3.0?repository_url=https://other-internal.com')
+
   t.end()
 })
 
